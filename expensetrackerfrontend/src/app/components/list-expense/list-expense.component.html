@@ -1,0 +1,17 @@
+
+<h1>All the Expenses</h1>
+
+<table border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Expense</th>
+        <th>Amount</th>
+        <th>Description</th>
+    </tr>
+    <tr *ngFor="let expense of expenses">
+        <td>{{expense.id}}</td>
+        <td>{{expense.expense}}</td>
+        <td>{{expense.amount}}</td>
+        <td>{{expense.description}}</td>
+     </tr>
+</table>

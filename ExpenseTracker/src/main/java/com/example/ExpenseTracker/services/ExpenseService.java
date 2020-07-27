@@ -15,6 +15,8 @@ public interface ExpenseService {
 
 	Expense add(Expense expense);
 
+	void delById(Long expenseId);
+
 	
 	
 	

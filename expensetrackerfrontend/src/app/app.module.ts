@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ExpenseService } from './services/expense.service';
@@ -9,9 +10,11 @@ import { ListExpenseComponent } from './components/list-expense/list-expense.com
 import { AddexpenseComponent } from './components/addexpense/addexpense.component';
 import { Route } from '@angular/compiler/src/core';
 
+
 const routers : Routes = [
   {path: 'expenses', component: ListExpenseComponent},
   {path: 'addexpense', component: AddexpenseComponent},
+  {path: 'editexpense/:id', component: AddexpenseComponent},
   {path: '', redirectTo: '/expenses', pathMatch: 'full'}
 ];
   
@@ -21,10 +24,12 @@ const routers : Routes = [
     AppComponent,
     ListExpenseComponent,
     AddexpenseComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routers)
   ],
   providers: [ExpenseService],

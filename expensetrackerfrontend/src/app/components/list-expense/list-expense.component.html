@@ -1,17 +1,23 @@
-
+<div style="text-align: center;">
 <h1>All the Expenses</h1>
+<button class="add" (click)="addExpense()">Add Expense</button>
 
-<table border="1px">
+
+<table border="1px" class="center">
     <tr>
-        <th>Id</th>
+
         <th>Expense</th>
         <th>Amount</th>
         <th>Description</th>
+        <th>Action</th>
     </tr>
     <tr *ngFor="let expense of expenses">
-        <td>{{expense.id}}</td>
+        
         <td>{{expense.expense}}</td>
         <td>{{expense.amount}}</td>
         <td>{{expense.description}}</td>
+        <td><button class="edit" (click)="editExpense(expense.id)">Edit</button>
+        <button class="delete" (click)="deleteExpense(expense.id)">Delete</button></td>
      </tr>
 </table>
+</div>

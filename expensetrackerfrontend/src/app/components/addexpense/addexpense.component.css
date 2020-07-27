@@ -1,0 +1,22 @@
+.addfield{
+    margin: 20px;
+    border-color: brown;
+    padding: 8px;
+}
+.add{
+    background-color: green;
+    padding: 15px;
+    border-radius: 15px;
+    margin-left: 5px;
+}
+.add:hover{
+    cursor: pointer;
+    background-color: cadetblue;
+}
+
+.home{
+    background-color: teal;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}

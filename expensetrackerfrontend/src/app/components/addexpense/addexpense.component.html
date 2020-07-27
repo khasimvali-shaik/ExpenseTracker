@@ -1,1 +1,10 @@
-<p>addexpense works!</p>
+<form>
+    <div style="text-align: center; ">
+        <input type="text" class="addfield" name="expense" required placeholder="Enter Expense" [(ngModel)]="expense.expense"/><br>
+        <input type="text" class="addfield" name="Amount" required placeholder="Enter Amount" [(ngModel)]="expense.amount"/><br>
+        <textarea class="addfield" name="description" required placeholder="Enter Description" [(ngModel)]="expense.description"></textarea>
+        <br>
+        <button class="home" (click)="home()" type="submit">Home</button>
+        <button class="add" (click)="addExpense()" type="submit">Add Expense</button>
+    </div>
+</form>
